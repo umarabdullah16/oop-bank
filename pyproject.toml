@@ -1,0 +1,24 @@
+[project]
+name = "ci-cd-eg"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "umarabdullah16",email = "umara1665@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+]
+
+[tool.poetry]
+packages = [{include = "ci_cd_eg", from = "src"}]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+addopts = "--cov=bank_account --cov-fail-under=0"
+[tool.pylint]
+disable = ["missing-module-docstring"]
+
